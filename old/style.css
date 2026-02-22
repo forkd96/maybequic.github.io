@@ -1,0 +1,255 @@
+/* --- tags appearance, animations and more yeah --- */
+
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+/*  unused - background: #171717; */
+    background-image: url("assets/stars3.jpg");
+    text-align: left;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px;
+    padding-top: 0px;
+    line-height: 1.5;
+    font-family: 'Segoe UI', sans-serif;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+h1, h2, h3, h4, h5, h6, p, b, strong, small, i {
+    color: #E5E4E2;
+    text-shadow: 0 0 1px #E5E4E2;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.86em;
+    gap: 5px;
+    text-shadow: 0 0 3px #171717;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 2.67em; /* six sevenn */
+    text-shadow: 0 0 10px #E5E4E2;
+}
+
+p {
+    font-size: 1.24em;
+}
+
+li {
+    text-align: left;
+    color: #E5E4E2;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+a {
+    position: relative;
+    color: #E5E4E2;
+    text-decoration: none;
+    line-height: 1;
+    display: inline-block;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.05em;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+header {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+/* --- custom styles probably idk --- */
+
+.container {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    padding-inline: 50px;
+
+    /* --- unused ---
+    background: rgba(23, 23, 23, 0.4);
+    border-radius: 12px;
+    border: 2px solid #444;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    */
+
+    /* blur i guess? doesn't work in chromium but does in firefox, fuck you google */
+    /*
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    */
+}
+
+/* --- unused replacement for backdrop-filter stolen from my old website's CSS ---
+.container::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    z-index: -1;
+    border-radius: inherit;
+    background: url("assets/stars3.jpg") center/cover;
+    filter: blur(12px);
+    opacity: 0.4;
+}
+*/
+
+.test li:hover {
+    transform: translateX(15px);
+    display: inline;
+}
+
+.donate li {
+    font-family: "Space Mono", monospace;
+    font-size: 1.10em;
+}
+
+.donate li:hover {
+    transform: translateX(15px);
+}
+
+li {
+    text-align: left;
+    color: #E5E4E2;
+    transition: transform 0.3s ease;
+}
+
+.projects li {
+    display: block; /* or list-item */
+    font-size: 1.10em;
+}
+
+.projects li:hover {
+    transform: translateX(15px);
+}
+
+.socials li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 1.10em;
+}
+
+.socials li:hover {
+    transform: translateY(-7px) scale(1.2);
+}
+
+.tilt {
+    transition: transform 0.3s ease;
+    will-change: transform;
+    transform-box: fill-box;
+}
+
+.tilt:hover {
+    transform: rotate(5deg);
+}
+
+.align-left.tilt:hover {
+  transform: translateY(-50%) rotate(5deg);
+}
+
+ul.socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+ul.socials li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.emoji {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+}
+
+.pride {
+    height: 0.8em;
+    vertical-align: -0.05em;
+    border-radius: 10%;
+}
+
+.align-left {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+}
+
+.align-bottom-left {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+}
+
+.credits {
+    color: rgb(106, 122, 173);
+}
+
+/* copy pasted from https://github.com/biancarosa/lastfm-last-played?tab=readme-ov-file#wanna-use-it  */
+.header__inner p {
+    margin: 0;
+}

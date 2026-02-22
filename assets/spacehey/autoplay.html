@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>click to play</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      width: 100%;
+      height: 100%;
+    }
+    #player {
+      width: 0;
+      height: 0;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<iframe
+  id="player"
+  src="https://www.youtube.com/embed/udbuWZHua8E?enablejsapi=1&loop=1&playlist=udbuWZHua8E"
+  allow="autoplay; encrypted-media"
+></iframe>
+
+<script>
+  let started = false;
+
+  function play() {
+    if (started) return;
+    started = true;
+
+    const iframe = document.getElementById("player");
+    iframe.contentWindow.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: "playVideo",
+        args: []
+      }),
+      "*"
+    );
+  }
+
+  document.addEventListener("click", play, { once: true });
+  document.addEventListener("keydown", play, { once: true });
+  document.addEventListener("touchstart", play, { once: true });
+</script>
+
+</body>
+</html>

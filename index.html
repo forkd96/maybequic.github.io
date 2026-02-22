@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<!-- warning spaghetti code ahead -->
+<!-- if you're reading this click this link, it's super important: https://www.youtube.com/watch?v=CMK5TDzRFp4 --><html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>insert cool title here...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="quic's corner of the web">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="annc">
+			<p style="text-align: center;">join my
+				<a href="https://sharkey.lol/">sharkey (misskey) instance!</a>
+				(boooo ad!!)</p>
+		</div>
+		<div class="helloworld">
+			
+			<!-- <p style="text-align: center;"><a href="#emergency">read me</a></p> -->
+			<p class="typing-anim">
+				<a href="https://www.youtube.com/watch?v=CMK5TDzRFp4" class="invisiblehref">&gt; neofetch -l</a>
+				<span class="cursor">█</span>
+			</p>
+		</div>
+		<pre class="title">
+  █████   █    ██  ██▓ ▄████▄       
+▒██▓  ██▒ ██  ▓██▒▓██▒▒██▀ ▀█       
+▒██▒  ██░▓██  ▒██░▒██▒▒▓█    ▄      
+░██  █▀ ░▓▓█  ░██░░██░▒▓▓▄ ▄██▒     
+░▒███▒█▄ ▒▒█████▓ ░██░▒ ▓███▀ ░ ██▓ 
+░░ ▒▒░ ▒ ░▒▓▒ ▒ ▒ ░▓  ░ ░▒ ▒  ░ ▒▓▒ 
+ ░ ▒░  ░ ░░▒░ ░ ░  ▒ ░  ░  ▒    ░▒  
+   ░   ░  ░░░ ░ ░  ▒ ░░         ░   
+    ░       ░      ░  ░ ░        ░  
+                      ░          ░  
+    </pre>
+		<main>
+			<p class="cool">some random russian guy who's into tech</p>
+			<nav>
+				<div>
+					<a href="https://discordapp.com/users/1384610412414373980">discord</a>
+					<a href="https://t.me/maybequic">telegram</a>
+					<a href="https://matrix.to/#/@noticing:matrix.org">matrix</a>
+				</div>
+				<div>
+					<a href="https://microslop.pw/@quic">misskey</a>
+					<a href="https://github.com/maybequic">github</a>
+					<a href="https://www.last.fm/user/vyteshark">last.fm</a>
+					<a href="https://steamcommunity.com/id/vyteshark/">steam</a>
+				</div>
+			</nav>
+			<section id="about">
+				<p>&gt; about me</p>
+				<p>hey there! i'm maybequic (aka vshark) or just quic for short, a web/game developer from russia<br>
+					currently learning frontend and lua<br>
+					<br>
+					it's currently <b><span id="clock"></span></b> in my timezone<br>
+				</p>
+			</section>
+			<section id="projects">
+				<p>&gt; projects</p>
+				<ul>
+					<li>
+						<a href="https://aneko.vshark.xyz/">aneko - discord bot</a>
+					</li>
+					<li>
+						<a href="https://hates-google.lol/">hates-google.lol</a>
+						(baack offline, this thing was dead anyway)</li>
+					<li>
+						<a href="https://www.youtube.com/watch?v=CMK5TDzRFp4">yeah that's it for now...</a>
+					</li>
+				</ul>
+			</section>
+			<section id="instances">
+				<p>&gt; instances i host</p>
+				<ul>
+					<li>
+						<a href="https://cobalt.microslop.pw/">cobalt</a>,
+						<a href="https://cobalt-api.microslop.pw/">cobalt api</a>
+					</li>
+					<li>
+						<a href="https://ihate.microslop.pw/">chibisafe</a>
+						(currently down, will fix it soon)</li>
+					<li>
+						<a href="https://microslop.pw/">sharkey (misskey)</a>
+					</li>
+					<li>and more coming later, if you want me to host anything lmk!</li>
+				</ul>
+			</section>
+			<section id="donate">
+				<p>&gt; donate</p>
+				<sup>
+					<pre class="wsp-howareyoudoing">if u ever want to donate to my projects you can! every single cent is appreciated &lt;3</pre>
+				</sup>
+				<ul>
+					<li>
+						<b>LTC:</b>
+						ltc1q0tkpmthuq33myza7gg3skf0uhtze0px9gt54vj</li>
+					<li>
+						<b>SOL:</b>
+						VrQsm5awuYUEFi4tf6DRsBhVigueQSgppmKSeYHwhfM</li>
+					<li>
+						<b>TON:</b>
+						UQCPUEUO-gAmY3O1binivRpZQxr1pf2GQVRsXObMV6Hh54iT</li>
+					<li>
+						<b>BTC:</b>
+						bc1q075jddtsytyzsxgkhylsysdgkt7zj62ufeeje6</li>
+				</ul>
+			</section>
+			<div style="display: flex; justify-content: center; align-items: center;">
+				<iframe src="https://sharkey.lol/embed/user-timeline/aiqlza0ufjdn0003?maxHeight=500&colorMode=dark" data-misskey-embed-id="v1_f041fec4-5508-4234-8713-57815f0bb1e1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+				<script defer src="https://sharkey.lol/embed.js"></script>
+			</div>
+		</main>
+    <script>
+const clock = document.getElementById("clock");
+
+function updateClock() {
+    const now = new Date();
+
+    const formatter = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Europe/Moscow",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    clock.textContent = formatter.format(now);
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+    </script>
+	</body>
+</html>

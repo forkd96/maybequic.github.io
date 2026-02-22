@@ -1,0 +1,79 @@
+
+<html>
+	<head>
+		<title>403 Forbidden</title>
+		<link rel="stylesheet" href="/dawg/dawgassets/iconfont/material-icons.css" />
+		<style>
+		@font-face {
+			font-family: '8bitoperator JVE';
+			src: url('/dawg/dawgassets/fonts/8bitoperator_jve.woff2') format('woff2'),
+			     url('/dawg/dawgassets/fonts/8bitoperator_jve.ttf') format('truetype');
+		}
+		
+		body {
+			background: black;
+			color: white;
+			font-family: "8bitoperator JVE";
+			font-size: 24pt;
+		}
+		
+		#dog, #sleepingdog {
+			width: 270px;
+			height: 190px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		
+		#details {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 100px;
+			margin: auto;
+			text-align: center;
+		}
+		
+		img {
+			image-rendering: pixelated;
+			width: 100%;
+			height: 100%;
+		}
+		
+		a {
+			color: white;
+		}
+
+		small {
+			font-size: 0.7em;
+		}
+		</style>
+	</head>
+    <body>
+		<div id="dog" style="width: 270px; height: 190px;">
+			<img id="dog0" src="/dawg/dawgassets/spr_tobdogl/0.png" />
+			<img id="dog1" src="/dawg/dawgassets/spr_tobdogl/1.png" style="display: none;" />
+		</div>
+		<div id="sleepingdog" style="width: 270px; height: 120px; display: none;">
+			<img id="sleepingdog0" src="/dawg/dawgassets/IMAGE_DOG/0.png" />
+			<img id="sleepingdog1" src="/dawg/dawgassets/IMAGE_DOG/1.png" style="display: none;" />
+		</div>
+		<div id="details">
+			<!-- these things are required by the script but they don't really do anything lol (i copy pasted allat from an extension) -->
+			<a href="" id="url"></a><br />
+            <span id="status"></span>
+
+			<span>HTTP 403 Forbidden</span><br>
+			<span><a href="/">Go home?</a></span>
+		</div>
+		<div id="mute">
+			<a id="mutebtn" href="#"><i class="material-icons">volume_up</i></a>
+			<a id="unmutebtn" href="#"><i class="material-icons">volume_off</i></a>
+		</div>
+		<p style="text-align: center;"><small>(click anywhere to unmute audio)</small>	</p>
+		<script src="/dawg/dogcheck.js"></script>
+    </body>
+</html>

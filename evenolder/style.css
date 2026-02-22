@@ -1,0 +1,158 @@
+/* --- tags and body appearance --- */
+
+body {
+    background-image: url("assets/stars.png");
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6, small, b, strong, i, li {
+    color: white;
+    align-items: center;
+} 
+
+li {
+    font-size: 18px;
+}
+
+nav {
+    /* --- appearance --- */
+    background-color: black;
+    opacity: 80%;
+    border-bottom: 0.2px solid #444;
+    border-top: 0.2px solid #444;
+    /* --- display --- */
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: #0e0e0e;
+    margin-top: 30px
+}
+
+small {
+    font-size: 12px
+}
+
+a {
+    color: rgb(106, 122, 173);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* --- custom styles, boxes etc. --- */
+
+.box {
+    /* --- appearance --- */
+    background-color: black;
+    opacity: 80%;
+    border: 2px solid #444;
+    border-radius: 3px;
+    /* --- display --- */
+    padding: 20px;
+    margin-inline: 200px;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-1 {
+    /* exact the same box but with centered content */
+    /* --- appearance --- */
+    background-color: black;
+    opacity: 80%;
+    border: 2px solid #444;
+    border-radius: 3px;
+    /* --- display --- */
+    padding: 20px;
+    margin-inline: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.title {
+    align-items: top;
+    margin-top: 0px;
+}
+
+/* --- animations --- */
+
+.zoom {
+    /* (unused) */
+    padding: 50px;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+.zoom:hover {
+    transform: scale(1.2);
+  }
+
+a:hover {
+    /* animation on hyperlink hover */
+    text-shadow: 0 0 10px #cccccc, 0 0 20px #e2e2e2;
+}
+
+/* optimizations for mobiles */
+@media only screen and (max-width: 950px) {
+    .box {
+        /* --- appearance --- */
+        background-color: black;
+        opacity: 80%;
+        border: 2px solid #444;
+        border-radius: 3px;
+        /* --- display --- */
+        padding: 12px;
+        margin-inline: 10px;
+        margin-top: 15px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box-1 {
+        /* exact the same box but with centered content */
+        /* --- appearance --- */
+        background-color: black;
+        opacity: 80%;
+        border: 2px solid #444;
+        border-radius: 3px;
+        /* --- display --- */
+        padding: 12px;
+        margin-inline: 10px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        justify-content: left;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .image {
+        display: none;
+     }
+
+     h1 {
+        font-size: 22px;
+     }
+
+     h2 {
+        font-size: 16px;
+     }
+
+     h3 {
+        font-size: 8px;
+     }
+}

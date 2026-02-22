@@ -1,0 +1,173 @@
+@import url( 'https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* this is lowk messy, i'm too lazy to add comments i hope u figure it out somehow if you're reading this lmao */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0f0f0f;
+    color: #e6e6e6;
+    font-family: "DM Mono", monospace;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+.helloworld,
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 1.5rem 2.5rem;
+}
+
+.helloworld {
+    padding: 50px 0 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.title {
+    margin-top: 3rem;
+    line-height: 1em;
+    text-align: center;
+    text-align: center;
+    font-size: 2.1rem;
+    line-height: 1em;
+}
+
+.cool {
+    opacity: 0.7;
+    margin-bottom: 2rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline wavy 0.5px;
+    text-underline-offset: 3px;
+    transition: text-shadow 0.3s ease;
+}
+a.invisiblehref:hover {
+    text-shadow: none;
+}
+
+a.invisiblehref {
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0 0 25px rgba(229, 228, 226, 1);
+}
+
+.typing-anim {
+    --chars: 35;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(var(--chars)) forwards;
+}
+
+@keyframes typing {
+    to {
+        width: calc(var(--chars) * 1ch);
+    }
+}
+
+.cursor {
+    margin-left: 2px;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+nav > div {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+
+nav,
+section {
+    margin-bottom: 3rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+li::before {
+    content: "- ";
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1rem;
+    }
+
+    .helloworld {
+        margin-left: 5%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor,
+    .typing-anim {
+        animation: none;
+        width: auto;
+    }
+}
+
+li,
+ul {
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.wsp-howareyoudoing {
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.goddamnitkriswherethefuckarewe {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.align-left {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+}
+
+/* --- --- */
+
+.annc {
+    background: repeating-linear-gradient( -45deg, #2b2b2b, #2b2b2b 10px, #1f1f1f 10px, #1f1f1f 20px );
+
+    padding: 3px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>vshark's corner of the web</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+        <!-- title and the nav bar -->
+        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 30px"><h1>nightfox's corner of the web</h1></div>
+        <nav>
+            <h2><a href="/">Home</a> / <a href="/contacts">Contacts</a> / <a href="/projects">Projects</a> / <a href="/tech">Tech stuff</a> / <a href="/credits">Credits</a> / <a href="/posts">Posts</a></h2>
+        </nav>
+
+        <div class="box">
+            <h1>Posts - UltaVPN</h1>
+        </div>
+
+        <!-- everything else -->
+        <div class="box-1">
+            <h1>Hello there!</h1>
+            <h2>This page is about what i found in the UltaVPN client and its traffic.</h2>
+            <h2>First of all, wth is "ulta"?</h2>
+            <p style="font-size: 18px">Welp, let's learn.</p>
+            <br>
+            <ul>
+                <li>Ulta is a program that allows people from russia to bypass the Discord ban. Is closed source, ofc. <br> Sounds harmless, right?</li>
+            </ul>
+            <p style="font-size: 18px; display: flex; justify-content: center;">But if it was harmless, i wouldn't be writing this...</p>
+            <br>
+            <h2>Software i used:</h2>
+            <p style="font-size: 16px; margin-top: 0px">Ghidra, curl, wireshark, sandboxes (any.run, hybrid analysis)</p>
+            <br>
+            <h2>Findings so far:</h2>
+            <ul>
+                <li>suspicious domain hardcoded - ksfcsdf.khpkadmig.click</li>
+                <li>functionality of taking screenshots (!)</li>
+                <li>process checks if it is being run in the VM/Sandbox or being reversed (!)</li>
+                <li>weak SSH server protection; uses ecdh-sha2-nistp256/384/521, hmac-sha1 - outdated shit with backdoors</li>
+                <li>domain responds with 404 (but alive and configured)</li>
+                <li><s>possible</s> data exfiltration</li>
+                <li>writes to the powershell startup profile data</li>
+                <li>uses amneziawg</li>
+            </ul>
+            <h2>More info:</h2>
+            <p style="font-size: 18px;">The domain thing <br> ----- <br>
+            WHOIS says that it was registered with namecheap.com and not much before the release date - december 2024 <br>
+            WHOIS fully - <b><a href="https://pastebin.com/WitpRhy8">*pastebin*</a></b> <br>
+            <div style="display: flex; justify-content: center;"><img src="assets/domain.png" width="700"></div>
+            <br>
+            curl -v "https://ksfcsdf.khpkadmig.click/bundles/check" says that the server is alive and configured, but returns 404: <br><br>
+            <h2><code>
+                {"message":"Cannot GET /bundles/check","error":"Not Found","statusCode":404}%
+            </code></h2><br><br>
+
+            the support is not responding. and yeah, i did wait. i waited for 2 months (they still didn't reply xD) <i>edit: i gave up, its been... 5-6 months or so? they still didn't reply yeah</i></p>
+
+            <p style="font-size: 18px; margin-top: 0px">ACTUAL spyware <br> ----- <br>
+            First of all, it has functionality of taking screenshots. Do i even need to say it?<br>
+            <div style="display: flex; justify-content: center;"><a href="https://any.run/report/0b9aff45b304aa95078e7def71a3a34f99d03c4c93114dca70711a8612aa944e/e6b6ce4a-97cf-4d88-9515-25246279bad4#i-table-processes-COM"><img src="assets/screenshots.png" width="400"></a></div></p>
+
+            <p style="font-size: 18px; margin-top: 0px">
+            Also... <br>
+            <div style="display: flex; justify-content: center;"><a href="https://hybrid-analysis.com/sample/0b9aff45b304aa95078e7def71a3a34f99d03c4c93114dca70711a8612aa944e/681253c4e3b73d66d10028a1"><img src="assets/hybrid.png" width="500"></a></div>
+            <br>
+            <div style="display: flex; justify-content: center;"><a href="https://any.run/report/0b9aff45b304aa95078e7def71a3a34f99d03c4c93114dca70711a8612aa944e/e6b6ce4a-97cf-4d88-9515-25246279bad4#i-table-processes-COM"><img src="assets/activity.png" width="600"></a></p></div>
+            <br>
+            <p style="font-size: 18px; margin-top: 0px">BONUS: debug garbage right in the production build!</p>
+            <div style="display: flex; justify-content: center;"><img src="assets/garbage.png" width="600"></div>
+            <br><br>
+            <h2>That's probably it for now. I still have more info, so I'll update this later <i>edit: no i wont lol i'm too lazy to finish this</i></h2>
+        </div>
+    </body>
+</html>

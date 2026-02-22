@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- hey psst... if you're reading this... go to https://vshark.xyz/old/secret/, there's a good prize for ya -->
+        <!-- last update at 5:40 AM GMT+3 11/13/2025 - QOL updates, improved the last.fm widget a lil bit -->
+        <title>vshark's corner of the web</title>
+        <meta charset="UTF-8">
+
+        <!-- icons titles SEO stuff etc -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/proto64x64.png">
+        <meta name="description" content="my simple personal website, come take a look idk">
+        <link rel="preload" as="image" href="assets/stars3.jpg">
+
+        <!-- fonts -->
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <main class="container">
+
+            <header>
+                <!-- prolly will add something else here in the future -->
+                <h1 style="text-align: center;">welcome to my corner of the internet!</h1>
+            </header>
+
+            <section id="intro">
+                <p>I'm <b>vshark</b>, a random furry that likes tech and everything related to it</p>
+                <p>
+                    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f1f7-1f1fa.png" alt="🇷🇺" class="emoji">
+                    <img src="https://emojiflags.avris.it/flags/Bisexual.png" alt="🏳️‍🌈" class="pride"> 
+                    13 y.o., Liberal, <b>he/him/any</b>
+                </p>
+            </section>
+
+            <section id="socials">
+                <p>Contact me at...</p>
+                <ul class="socials">
+                    <!-- holy spaghetti code -->
+                    <li><a href="https://matrix.to/#/@vshark:vshark.xyz" target="_blank"><img src="assets/icons/matrix2.png" alt="Matrix" aria-label="Matrix" height="20" style="transform: translateY(1.5px);"></a></li>
+                    <li><a href="https://discordapp.com/users/1384610412414373980" target="_blank"><img src="assets/icons/discord.png" alt="Discord" aria-label="Discord" height="25" style="transform: translateY(-1px); margin-right: -2px; margin-left: -5.5px;"></a></li>
+                    <li><a href="https://rvlt.gg/BtzJ0wFJ" target="_blank"><img src="assets/icons/revolt.png" alt="Revolt" aria-label="Revolt" height="20" style="transform: translateY(1.5px); margin-left: -2.5px;"></a></li>
+                    <li><a href="https://t.me/vyteshark" target="_blank"><img src="assets/icons/telegram2.png" alt="Telegram" aria-label="Telegram" height="25" style="transform: translateY(-1px); margin-inline: -5px;"></a></li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <p>My projects</p>
+                <ul class="projects">
+                    <!-- projects more like random shi i coded with chatgpt in 30 minutes lmao -->
+                    <li><a href="https://aneko.vshark.xyz/">aneko. (Owner, dev)</a></li>
+                    <li><a href="https://hates-google.lol">hates-google.lol (Owner)</a></li>
+                    <li><a href="https://github.com/scream-dev/gaigle">gAIgle (ex Dev, Tester)</a></li>
+                    <li><a href="https://github.com/vyteshark/bbblox-linux">BubbaBlox wine wrapper (Owner)</a></li>
+                </ul>
+            </section>
+            
+            <section id="donate">
+                <p>My crypto wallets if you ever wanna donate!</p>
+                <ul class="donate">
+                    <!-- i have like 130 unique visitors per day, i wont get shit, why did i even put this here ✌️ -->
+                    <li>LTC: ltc1q0tkpmthuq33myza7gg3skf0uhtze0px9gt54vj</li>
+                    <li>SOL: VrQsm5awuYUEFi4tf6DRsBhVigueQSgppmKSeYHwhfM</li>
+                    <li>TON: UQCPUEUO-gAmY3O1binivRpZQxr1pf2GQVRsXObMV6Hh54iT</li>
+                    <li>BTC: bc1q075jddtsytyzsxgkhylsysdgkt7zj62ufeeje6</li>
+                </ul>
+            </section>
+        
+            </main>
+
+            <!-- lastfm widget, script used for it is at /lastfm.js feel free to use it in your website -->
+            <div class="align-left" style="top: 102%;">
+                <div class="header__inner">
+                    <p id="lastfm-status"><small>loading status...</small></p>
+                </div>
+                <div class="header__inner">
+                    <p><span id="song">loading song...</span></p>
+                </div>
+            </div>
+
+
+        <footer>
+            <!-- credits to https://www.luckless.de/ for website's general style inspo btw! credit worthy but also not footer worthy, so im putting this here -->
+            <!-- <p style="text-shadow: 0 0 5px #171717"><b>© 6741 BC - 2025 vshark.xyz - All Rights Stolen. // old website avaiable at <a href="/old">/old</a></b></p> -->
+        </footer>
+
+        <script src="lastfm.js" async defer></script>
+    </body>
+</html>
